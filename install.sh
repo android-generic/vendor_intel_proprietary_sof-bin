@@ -10,7 +10,7 @@ set -e
 
 # Default values, override on the command line
 : "${FW_DEST:=/lib/firmware/intel}"
-: "${TOOLS_DEST:=/usr/local/bin}"
+: "${FW_LOCATION:=sof-bin}"
 
 usage()
 {
@@ -31,7 +31,7 @@ main()
     local sdir sloc
 
     for sdir in sof sof-tplg; do
-        sloc="$path/$sdir-$ver"
+        sloc="$FW_LOCATION/$path/$sdir-$ver"
         test -d "$sloc" ||
             die "%s not found\n" "$sloc"
     done
@@ -47,8 +47,7 @@ main()
     done
 
     # Trailing slash in srcdir/ ~= srcdir/*
-    rsync -a "${path}"/sof*"$ver" "${FW_DEST}"/
-    rsync -a "${path}"/tools-"$ver"/ "${TOOLS_DEST}"/
+    rsync -a "${FW_LOCATION}/${path}"/sof*"$ver" "${FW_DEST}"/
 }
 
 die()

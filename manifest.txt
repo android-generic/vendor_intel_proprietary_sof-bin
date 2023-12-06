@@ -1,3 +1,20 @@
+sof-ace-tplg-v2.7	./sof-hda-generic.tplg
+sof-ace-tplg-v2.7	./sof-hda-generic-2ch.tplg
+sof-ace-tplg-v2.7	./sof-hda-generic-4ch.tplg
+sof-ace-tplg-v2.7	./sof-hda-generic-idisp.tplg
+sof-ace-tplg-v2.7	./sof-mtl-rt711-4ch.tplg
+sof-ace-tplg-v2.7	./sof-mtl-rt711-l0-rt1316-l23-rt714-l1.tplg
+sof-ace-tplg-v2.7	./sof-mtl-rt712-l0-rt1712-l3.tplg
+sof-ace-tplg-v2.7	./sof-mtl-rt1019-rt5682.tplg
+sof-ace-tplg-v2.7	./sof-mtl-rt1318-l12-rt714-l0.tplg
+sof-ace-tplg-v2.7	./sof-mtl-sdw-cs42l42-l0-max98363-l2.tplg
+sof-ace-tplg-v2.7.2	./sof-mtl-max98357a-rt5682.tplg
+sof-ace-tplg-v2.7.2	./sof-mtl-max98357a-rt5682-ssp2-ssp0.tplg
+sof-ace-tplg-v2.7.2	./sof-mtl-max98357a-rt5682-ssp2-ssp0-2ch-pdm1.tplg
+sof-ace-tplg-v2.7.2	./sof-mtl-rt713-l0-rt1316-l12.tplg
+sof-ace-tplg-v2.7.2	./sof-mtl-rt713-l0-rt1316-l12-rt1713-l3.tplg
+sof-ipc4-v2.7.1	./mtl/community/sof-mtl.ri
+sof-ipc4-v2.7.1	./mtl/intel-signed/sof-mtl.ri
 sof-tplg-v2.2.1	./sof-acp.tplg
 sof-tplg-v2.2.1	./sof-adl-cs35l41.tplg
 sof-tplg-v2.2.1	./sof-adl-max98357a-rt5682.tplg
@@ -137,16 +154,12 @@ sof-tplg-v2.2.1	./sof-glk-es8336-ssp2.tplg
 sof-tplg-v2.2.1	./sof-glk-es8336-ssp5.tplg
 sof-tplg-v2.2.1	./sof-glk-nocodec.tplg
 sof-tplg-v2.2.1	./sof-glk-rt5682.tplg
-sof-tplg-v2.2.1	./sof-hda-generic.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-1ch.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-1ch-pdm1.tplg
-sof-tplg-v2.2.1	./sof-hda-generic-2ch.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-2ch-kwd.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-2ch-pdm1.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-3ch.tplg
-sof-tplg-v2.2.1	./sof-hda-generic-4ch.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-4ch-kwd.tplg
-sof-tplg-v2.2.1	./sof-hda-generic-idisp.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-idisp-2ch.tplg
 sof-tplg-v2.2.1	./sof-hda-generic-idisp-4ch.tplg
 sof-tplg-v2.2.1	./sof-icl-dmic-4ch.tplg
@@ -204,8 +217,6 @@ sof-tplg-v2.2.1	./sof-mt8195-mt6359-rt1019-rt5682-dts.tplg
 sof-tplg-v2.2.1	./sof-rn-rt5682-max98360.tplg
 sof-tplg-v2.2.1	./sof-rn-rt5682-rt1019.tplg
 sof-tplg-v2.2.1	./sof-rpl-nocodec.tplg
-sof-tplg-v2.2.1	./sof-rpl-rt711.tplg
-sof-tplg-v2.2.1	./sof-rpl-rt711-4ch.tplg
 sof-tplg-v2.2.1	./sof-smart-amplifier-nocodec.tplg
 sof-tplg-v2.2.1	./sof-tgl-es8336.tplg
 sof-tplg-v2.2.1	./sof-tgl-es8336-dmic2ch-ssp0.tplg
@@ -258,14 +269,9 @@ sof-tplg-v2.2.3	./sof-icl-es8336-dmic4ch-ssp2.tplg
 sof-tplg-v2.2.3	./sof-icl-es8336-ssp0.tplg
 sof-tplg-v2.2.3	./sof-icl-es8336-ssp1.tplg
 sof-tplg-v2.2.3	./sof-icl-es8336-ssp2.tplg
-sof-tplg-v2.2.3	./sof-rpl-rt711-l0-rt1318-l12-rt714-l3.tplg
-sof-tplg-v2.2.3	./sof-rpl-rt711-l2-rt1316-l01-rt714-l3.tplg
-sof-tplg-v2.2.3	./sof-rpl-rt1316-l12-rt714-l0.tplg
 sof-tplg-v2.2.4	./sof-adl-rt711-l0-rt1316-l2-2ch.tplg
 sof-tplg-v2.2.4	./sof-adl-rt711-l0-rt1316-l2-4ch.tplg
 sof-tplg-v2.2.4	./sof-jsl-rt5682.tplg
-sof-tplg-v2.2.4	./sof-rpl-rt711-l0-rt1318-l12.tplg
-sof-tplg-v2.2.4	./sof-rpl-rt711-l2-rt1316-l01.tplg
 sof-tplg-v2.2.5	./sof-adl-es8336.tplg
 sof-tplg-v2.2.5	./sof-adl-es8336-dmic2ch-ssp0.tplg
 sof-tplg-v2.2.5	./sof-adl-es8336-dmic2ch-ssp1.tplg
@@ -277,11 +283,22 @@ sof-tplg-v2.2.5	./sof-adl-es8336-ssp0.tplg
 sof-tplg-v2.2.5	./sof-adl-es8336-ssp2.tplg
 sof-tplg-v2.2.6	./sof-adl-nocodec-hdmi-ssp02.tplg
 sof-tplg-v2.2.6	./sof-adl-rt1316-l1-mono-rt714-l0.tplg
-sof-tplg-v2.2.6	./sof-rpl-rt711-l0.tplg
-sof-tplg-v2.2.6	./sof-rpl-rt711-l0-rt1316-l12-rt714-l3.tplg
-sof-tplg-v2.2.6	./sof-rpl-rt711-l2.tplg
 sof-tplg-v2.2.6	./sof-tgl-nocodec-hdmi-ssp15.tplg
 sof-tplg-v2.2.6	./sof-tgl-rt1308-ssp2-hdmi-ssp15.tplg
+sof-tplg-v2.2.7	./sof-adl-max98360a-da7219.tplg
+sof-tplg-v2.2.7	./sof-adl-nau8318-nau8825.tplg
+sof-tplg-v2.2.7	./sof-adl-rt5650.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-4ch.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l0.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l0-rt1316-l12.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l0-rt1316-l12-rt714-l3.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l0-rt1318-l12.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l0-rt1318-l12-rt714-l3.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l2.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l2-rt1316-l01.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt711-l2-rt1316-l01-rt714-l3.tplg
+sof-tplg-v2.2.8	./sof-rpl-rt1316-l12-rt714-l0.tplg
 sof-v2.2	./community/sof-apl.ri
 sof-v2.2	./community/sof-cnl.ri
 sof-v2.2	./community/sof-icl.ri
@@ -310,12 +327,14 @@ sof-v2.2	./sof-icl.ldc
 sof-v2.2	./sof-jsl.ldc
 sof-v2.2	./sof-tgl.ldc
 sof-v2.2	./sof-tgl-h.ldc
-tools-v2.2	./sof-ctl
 tools-v2.2	./sof-logger
-tools-v2.2	./sof-probes
+tools-v2.7	./mtrace-reader.py
+tools-v2.7	./sof-ctl
+tools-v2.7	./sof-probes
 
 #   --- symbolic links ---
 
+sof-ipc4-v2.7.1	./mtl/sof-mtl.ri -> intel-signed/sof-mtl.ri
 sof-v2.2	./community/sof-adl-n.ri -> sof-tgl.ri
 sof-v2.2	./community/sof-adl-s.ri -> sof-tgl-h.ri
 sof-v2.2	./community/sof-adl.ri -> sof-tgl.ri

@@ -1,4 +1,5 @@
 #!/bin/sh
+# shellcheck disable=SC3043
 
 # Keep this script as short as possible _and_ optional - some
 # distributions don't use it at all.
@@ -16,38 +17,50 @@ usage()
 {
     cat <<EOF
 Usage example:
-        sudo $0 [v1.8.x/]v1.8
+        sudo $0 [[v1.8.x/]v1.8]
 EOF
     exit 1
 }
 
 main()
 {
-    test "$#" -eq 1 || usage
+    test "$#" -le 1 || usage
 
     # Never empty, dirname returns "." instead (opengroup.org)
     local path; path=$(dirname "$1")
     local ver; ver=$(basename "$1")
-    local sdir sloc
+    local sdir optversuffix
 
-    for sdir in sof sof-tplg; do
-        sloc="$FW_LOCATION/$path/$sdir-$ver"
-        test -d "$sloc" ||
-            die "%s not found\n" "$sloc"
-    done
+    [ -z "$ver" ] || optversuffix="-$ver"
 
     # Do this first so we can fail immediately and not leave a
     # half-install behind
-    set -x
-    for sdir in sof sof-tplg; do
-        ln -sT "$sdir-$ver" "${FW_DEST}/$sdir" || {
-            set +x
-            die '%s already installed? (Re)move it first.\n' "${FW_DEST}/$sdir"
-        }
-    done
+    if [ -n "$optversuffix" ]; then
+        if test -e "$path/sof${optversuffix}" -a -e "$path/sof-tplg${optversuffix}" ; then
+            : # SOF IPC3 SOF layout
+        elif test -e "$path/sof-ipc4${optversuffix}" -a -e "$path/sof-ace-tplg${optversuffix}" ; then
+            : # SOF IPC4 layout for Intel Meteor Lake (and newer)
+        else
+            die "Files not found or unknown FW file layout $1 \n"
+        fi
+
+        for sdir in sof sof-ipc4 sof-ace-tplg sof-tplg; do
+            if test -e "$FW_LOCATION/$path/$sdir${optversuffix}" ; then
+                # Test workaround. Currently enough to run the whole test suite on Darwin
+                case "$(uname)" in
+                    Darwin) safer_ln=;;
+                    *) safer_ln='--no-target-directory';;
+                esac
+                ( set -x; ln -s $safer_ln "$sdir-$ver" "${FW_DEST}/$sdir" ) || {
+                    set +x
+                    die '%s already installed? (Re)move it first.\n' "${FW_DEST}/$sdir"
+                }
+            fi
+        done
+    fi
 
     # Trailing slash in srcdir/ ~= srcdir/*
-    rsync -a "${FW_LOCATION}/${path}"/sof*"$ver" "${FW_DEST}"/
+	rsync -a "${FW_LOCATION}/${path}"/sof*"$optversuffix" "${FW_DEST}"/
 }
 
 die()

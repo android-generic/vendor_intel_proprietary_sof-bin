@@ -28,7 +28,7 @@ main()
 
     # Never empty, dirname returns "." instead (opengroup.org)
     local path; path=$(dirname "$1")
-    local ver; ver=$(basename "$1")
+    local ver; #ver=$(basename "$1")
     local sdir optversuffix
 
     [ -z "$ver" ] || optversuffix="-$ver"
@@ -36,9 +36,9 @@ main()
     # Do this first so we can fail immediately and not leave a
     # half-install behind
     if [ -n "$optversuffix" ]; then
-        if test -e "$path/sof${optversuffix}" -a -e "$path/sof-tplg${optversuffix}" ; then
+        if test -e "$FW_LOCATION/sof${optversuffix}" -a -e "$FW_LOCATION/sof-tplg${optversuffix}" ; then
             : # SOF IPC3 SOF layout
-        elif test -e "$path/sof-ipc4${optversuffix}" -a -e "$path/sof-ace-tplg${optversuffix}" ; then
+        elif test -e "$FW_LOCATION/sof-ipc4${optversuffix}" -a -e "$FW_LOCATION/sof-ace-tplg${optversuffix}" ; then
             : # SOF IPC4 layout for Intel Meteor Lake (and newer)
         else
             die "Files not found or unknown FW file layout $1 \n"
